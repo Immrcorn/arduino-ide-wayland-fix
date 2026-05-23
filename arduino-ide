@@ -1,0 +1,11 @@
+#!/bin/bash
+#
+# Arduino IDE 2 Wayland + NVIDIA Fix for Omarchy / Arch + Hyprland
+# Forces the IDE to run under X11/XWayland to prevent segfaults during
+# Electron/Theia graphics initialization.
+#
+# Usage:
+#   - Place in ~/.local/bin/ and make executable
+#   - Or run directly: ./arduino-ide
+
+exec env -u WAYLAND_DISPLAY XDG_SESSION_TYPE=x11 /usr/bin/arduino-ide "$@"
