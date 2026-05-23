@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Arduino IDE
+Comment=Arduino IDE 2 - X11 forced (fixes Wayland + NVIDIA segfault on Omarchy/Hyprland)
+Exec=env -u WAYLAND_DISPLAY XDG_SESSION_TYPE=x11 /usr/bin/arduino-ide
+Icon=arduino
+Terminal=false
+Type=Application
+Categories=Development;IDE;
+StartupWMClass=arduino-ide
